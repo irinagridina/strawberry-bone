@@ -1,20 +1,15 @@
-<div data-section-id="{{ section.id }}" data-section-type="featured-content-section">
-  <div class="rich-text wrapper">
-    <div class="grid">
-      <div class="grid__item text-center{% unless section.settings.home_page_full_width %} large--two-thirds medium--two-thirds push--large--one-sixth push--medium--one-sixth{% endunless %}">
-        {% if section.settings.section_title != blank %}
-          <div class="section-header">
-            <h2 class="rich-text__heading--{{ section.settings.text_size }} section-header__title h1">{{ section.settings.section_title | escape }}</h2>
-          </div>
-        {% endif %}
-        {% if section.settings.text != blank %}
-          <div class="rte rich-text__text--{{ section.settings.text_size }}">
-            {{ section.settings.text }}
-          </div>
-        {% endif %}
-      </div>
+<div class="rich-text">
+  <hr>
+  {% if section.settings.section_title != blank %}
+    <div class="section-header rich-text__heading rich-text__heading--{{ section.settings.text_size }}">
+      <p class="h1">{{ section.settings.section_title | escape }}</p>
     </div>
-  </div>
+  {% endif %}
+  {% if section.settings.text != blank %}
+    <div class="rte rich-text__text--{{ section.settings.text_size }}">
+      {{ section.settings.text }}
+    </div>
+  {% endif %}
 </div>
 
 
@@ -30,26 +25,12 @@
     "ja": "リッチテキスト",
     "pt-BR": "Rich text"
   },
-  "class": "index-section rich-text-section",
   "settings": [
-    {
-      "type": "checkbox",
-      "id": "home_page_full_width",
-      "label": {
-        "de": "Breites Display",
-        "en": "Wide display",
-        "es": "Pantalla ancha",
-        "fr": "Écran large",
-        "it": "Visualizzazione ampia",
-        "ja": "ワイドディスプレイ",
-        "pt-BR": "Exibição ampla"
-      }
-    },
     {
       "type": "text",
       "id": "section_title",
       "label": {
-        "de": "Überschrift",
+        "de": "Titel",
         "en": "Heading",
         "es": "Título",
         "fr": "Titre",
@@ -61,7 +42,7 @@
         "de": "Über Ihre Marke sprechen",
         "en": "Talk about your brand",
         "es": "Habla de tu marca",
-        "fr": "Parlez de votre marque",
+        "fr": "Parler de votre marque",
         "it": "Parla del tuo brand",
         "ja": "あなたのブランドについて語る",
         "pt-BR": "Fale sobre a sua marca"
@@ -73,20 +54,20 @@
       "label": {
         "de": "Text",
         "en": "Text",
-        "es": "texto",
+        "es": "Texto",
         "fr": "Texte",
         "it": "Testo",
         "ja": "テキスト",
         "pt-BR": "Texto"
       },
       "default": {
-        "de": "<p>Mit diesem Text können Sie Ihre Kunden über Ihre Marke informieren. Beschreiben Sie ein Produkt, veröffentlichen Sie Ankündigungen oder begrüßen Sie Kunden in Ihrem Shop.</p>",
+        "de": "<p>Nutzen Sie diesen Text, um Infos über Ihre Marke mitzuteilen. Beschreiben Sie ein Produkt, kündigen Sie etwas an oder heißen Sie Kunden willkommen.</p>",
         "en": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>",
         "es": "<p>Usa este texto para compartir información sobre tu marca con tus clientes. Describe un producto, comparte anuncios o recibe clientes en tu tienda.</p>",
-        "fr": "<p>Utilisez ce texte pour communiquer des informations sur votre marque à vos clients. Décrivez un produit, partagez des annonces ou accueillez des clients dans votre boutique.</p>",
-        "it": "<p>Utilizza questo testo per condividere le informazioni sul tuo brand con i tuoi clienti. Descrivi un prodotto, condividi gli annunci o dai il benvenuto ai clienti nel tuo negozio.</p>",
+        "fr": "<p>Utilisez ce texte pour partager des informations sur votre marque. Décrivez un produit, partagez des annonces, ou souhaitez la bienvenue à vos clients.</p>",
+        "it": "<p>Utilizza questo testo per condividere le informazioni sul tuo brand con i clienti. Descrivi un prodotto, condividi gli annunci o dai il benvenuto ai clienti nel tuo negozio.</p>",
         "ja": "<p>このテキストを使用して、あなたのブランドに関する情報をお客様と共有します。商品を説明したり、告知の共有をしたり、あるいはあなたのストアのお客様を歓迎します。</p>",
-        "pt-BR": "<p>Use este texto para compartilhar informações sobre sua marca com seus clientes. Descreva um produto, compartilhe anúncios ou receba os clientes em sua loja.</p>"
+        "pt-BR": "<p>Use este texto para compartilhar informações sobre sua marca com seus clientes. Descreva um produto, compartilhe novidades ou receba os clientes em sua loja.</p>"
       }
     },
     {
@@ -107,9 +88,9 @@
           "label": {
             "de": "Klein",
             "en": "Small",
-            "es": "Pequeña",
-            "fr": "Petit",
-            "it": "Piccolo",
+            "es": "Pequeño",
+            "fr": "Petite",
+            "it": "Small",
             "ja": "小",
             "pt-BR": "Pequeno"
           },
@@ -117,11 +98,11 @@
         },
         {
           "label": {
-            "de": "Mittel",
+            "de": "Mitte",
             "en": "Medium",
-            "es": "medio",
-            "fr": "Moyen",
-            "it": "Medio",
+            "es": "Mediano",
+            "fr": "Moyenne",
+            "it": "Medium",
             "ja": "中",
             "pt-BR": "Médio"
           },
@@ -131,9 +112,9 @@
           "label": {
             "de": "Groß",
             "en": "Large",
-            "es": "grande",
-            "fr": "Grand",
-            "it": "Grande",
+            "es": "Grande",
+            "fr": "Grande",
+            "it": "Large",
             "ja": "大",
             "pt-BR": "Grande"
           },
